@@ -1,0 +1,45 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+/**
+ * 1. A slightly smaller padding on smaller viewports.
+ * 2. Grow to full-sized padding on large enough viewports.
+ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $site-header-height;
+  border-bottom: 1px solid #f2f2f2;
+  background-color: $color-site-header-bg;
+  z-index: 1;
+
+	&__logo {
+    float: left;
+
+		svg {
+      display: block;
+      width: $site-header-height;
+      height: $site-header-height;
+      background-color: white;
+      fill: red;
+      transition: all 200ms linear;
+		}
+
+    &:hover svg {
+      background-color: red;
+      fill: white;
+    }
+	}
+
+  &__nav {
+    float: left;
+    margin-left: 1rem;
+  }
+
+  &__social {
+    float: right;
+  }
+}

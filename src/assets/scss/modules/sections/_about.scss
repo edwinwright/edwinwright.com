@@ -1,0 +1,86 @@
+/**
+ * About Section Module Stylesheet
+ *
+ * Styles used for the Header module shared across all pages.
+ * Check your styles! Could anything in here be re-defined as a component?
+ */
+
+section#about {
+	border-bottom: 1px solid #f3f6f6;
+	background: #e7ebec url(images/template/section_bg.png) repeat 50% 0 fixed;
+
+	> .inner {
+		@include page-wrap(3em, 3em);
+	}
+
+	.about_content {
+		img {
+			float: right;
+			margin: -4em 0 .5em 1em;
+			width: 100px;
+			border-radius: 50px;
+		}
+	}
+
+	footer {
+		text-align: center;
+	}
+
+}
+
+@include breakpoint(XS) {
+	section#about {
+		.about_content {
+			img {
+				width: 150px;
+				border-radius: 75px;
+			}
+		}
+	}
+}
+
+@include breakpoint(S) {
+	section#about {
+		.about_content {
+			float: left;
+			margin-right: 200px;
+			padding-right: 10%;
+
+			img {
+				position: absolute;
+				right: 2.5%;
+				width: 200px;
+				border-radius: 100px;
+			}
+		}
+
+		footer {
+			float: right;
+			width: 200px;
+			margin-left: -200px;
+			margin-top: 160px;
+			text-align: center;
+		}
+	}
+}
+
+@include breakpoint(M) {
+	section#about {
+		.about_content {
+			img {
+				right: 2%;
+			}
+		}
+	}
+}
+
+@include breakpoint(L) {
+	section#about {
+		.about_content {
+			img {
+				right: 2em;
+				margin: -4em 0 0 0;
+			}
+		}
+	}
+}

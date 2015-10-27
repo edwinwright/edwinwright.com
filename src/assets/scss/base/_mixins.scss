@@ -1,0 +1,31 @@
+
+
+/**
+ * Vertical Alignment for Containers
+ * 
+ * These styles apply a vertical alignment to a block element using the table/table-cell 
+ * method. The element that it is applied to should have an 'inner' element that will be 
+ * picked up automatically by the style and used as the table cell.
+ */
+.table-centre {
+    display: table;
+    > * {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+
+// inline block
+// * hacks for ie7
+.inline-block {
+    display: inline-block;
+    *vertical-align: top;
+    *display: inline;
+    zoom:1;
+}
+
+
+
+

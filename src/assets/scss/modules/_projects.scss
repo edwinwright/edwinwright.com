@@ -1,0 +1,148 @@
+/**
+ * Projects Module
+ *
+ * Defines project blocks on home and project pages
+ */
+
+.projectSet {
+	@include clearfix;
+}
+
+.project {
+	position: relative;
+	padding: 1em 0;
+	border-top: 1px solid #dadcdd;
+
+	header {
+		height: 3em;
+		padding-right: 2.25em;
+
+		h2 {
+			@extend .heading6;
+			text-transform: uppercase;
+			margin: 0;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+
+			& + p {
+				margin: 0;
+				font-size: .875em;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}
+
+.project_thumbnail {
+	display: block;
+
+	img {
+		@include responsive-image;
+		border: 1px solid #dadcdd;
+		margin-bottom: 1em;
+	}
+}
+
+.project_link {
+	position: absolute;
+	right: 0;
+	top: 1em;
+}
+
+
+@include breakpoint(XS) {
+	.project {
+		@include clearfix;
+	}
+
+	.project_thumbnail {
+		float: left;
+		width: 49%;
+		position: relative;
+		margin: 0 1em 1em 0;
+		overflow: hidden;
+		border: 1px solid #dadcdd;
+		background: #000;
+
+		img {
+			margin: 0;
+			border: none;
+			@include transition(all 200ms ease-out);
+		}
+
+		footer {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			color: #fff;
+			background: #1c1d18 url(images/code_bg.jpg) no-repeat 0 bottom;
+			background: rgba(0,0,0,.8);
+			opacity: 0;
+			@include transform(scale(.85));
+			@include transition(all 250ms ease-out);
+
+			p {
+				width: 100%;
+				height: 100%;
+				padding: 1em 1em 1em 3em;
+				font-family: Andale Mono, monospace;
+				font-size: .937em;
+				color: #00fe56;
+				@include transition(all 400ms ease-out);
+
+				&:before {
+					position: absolute;
+					left: 1em;
+					top: 1em;
+					content: ">:";
+				}
+
+				&:after {
+					content: "_";
+					@include animation(blink 1s infinite);
+				}
+			}
+		}
+
+		&:hover {
+			footer {
+				opacity: 1;
+				@include transform(scale(1));
+			}
+		}
+	}
+}
+
+@include keyframes(blink) {
+    0%,
+    100% { 
+    	opacity: 1;
+    }
+    50% {
+    	opacity: 0;
+    }
+}
+
+@include breakpoint(M) {
+	.projectSet {
+		margin: 0 0 0 -2%;
+	}
+
+	.project {
+		float: left;
+		width: 31.333%;
+		height: 34em;
+		margin-left: 2%;
+	}
+
+	.project_thumbnail {
+		float: none;
+		width: 100%;
+
+	}
+}

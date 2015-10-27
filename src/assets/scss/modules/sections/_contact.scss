@@ -1,0 +1,14 @@
+/**
+ * Projects Section Module Stylesheet
+ *
+ * Styles used for the Header module shared across all pages.
+ * Check your styles! Could anything in here be re-defined as a component?
+ */
+
+section#contact {
+	border-bottom: 1px solid #f3f6f6;
+
+	> .inner {
+		@include page-wrap(3em, 2em);
+	}
+}

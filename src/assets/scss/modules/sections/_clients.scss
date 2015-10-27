@@ -1,0 +1,28 @@
+/**
+ * Projects Section Module Stylesheet
+ *
+ * Styles used for the Header module shared across all pages.
+ * Check your styles! Could anything in here be re-defined as a component?
+ */
+
+section#clients {
+	border-bottom: 1px solid #f3f6f6;
+	background: #e7ebec url(images/template/section_bg.png) repeat 50% 0 fixed;
+
+	> .inner {
+		@include page-wrap(3em, 3em);
+	}
+
+	header {
+		display: none;
+	}
+
+	h3 {
+		@extend .heading2;
+	}
+	
+	.agencyList {
+		margin-bottom: 2em;
+	}
+
+}

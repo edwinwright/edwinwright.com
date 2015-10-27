@@ -1,0 +1,87 @@
+/**
+ * Layout Stylesheet
+ *
+ * This file sets the layout for the site. It defines the framework for the
+ * pages (rows, columns) that will hold the modules.
+ */
+
+/** Major breakpoints */
+//$breakpointXXS:	20em;		// 320px
+$breakpointXS:		30em;		// 480px
+$breakpointS: 		40em;		// 640px
+$breakpointM: 		50em;		// 800px
+$breakpointL: 		60em;		// 960px
+$breakpointXL: 		71.25em;	// 1140px
+//$breakpointXXL:	??;
+
+
+/** Define mixins */
+// break point media queries
+@mixin breakpoint($point) {
+	@if $point == XS {
+		@media screen and (min-width: $breakpointXS) { @content; }
+	}
+	@else if $point == S {
+		@media screen and (min-width: $breakpointS) { @content; }
+	}
+	@else if $point == M {
+		@media screen and (min-width: $breakpointM) { @content; }
+	}
+	@else if $point == L {
+		@media screen and (min-width: $breakpointL) { @content; }
+	}
+	@else if $point == XL {
+		@media screen and (min-width: $breakpointXL) { @content; }
+	}
+}
+
+// page wrapping containers
+@mixin page-wrap($paddingTop: 0, $paddingBottom: 0) {
+	position: relative;
+	margin: 0 auto;
+	padding: $paddingTop 3.5% $paddingBottom;
+	@include clearfix;
+
+	@include breakpoint(XS) {
+		padding: $paddingTop 2.5% $paddingBottom;
+	}
+	@include breakpoint(M) {
+		padding: $paddingTop 2% $paddingBottom;
+	}
+	@include breakpoint(L) {
+		max-width: $breakpointL;
+		padding: $paddingTop 2em $paddingBottom;
+	}
+}
+
+// responsive images
+@mixin responsive-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/** Set box sizing */
+* { @include box-sizing(border-box); }
+
+
+/** Define grid system */
+@include breakpoint(L) {
+
+	.columns {
+		@include clearfix;
+		
+		&.doubleCol{
+			.col1 {
+				float: left;
+				width: 49%;
+			}
+
+			.col2 {
+				float: right;
+				width: 49%;
+			}
+		}
+	}
+}

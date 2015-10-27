@@ -1,0 +1,90 @@
+
+
+/**
+ * #SETTINGS
+ */
+@import "node_modules/inuit-defaults/settings.defaults";
+@import "settings.global";
+@import "settings.colors";
+@import "node_modules/inuit-responsive-settings/settings.responsive";
+
+
+/**
+ * #TOOLS
+ */
+@import "node_modules/inuit-functions/tools.functions";
+@import "node_modules/inuit-mixins/tools.mixins";
+@import "tools.mixins";
+@import "node_modules/inuit-tools-widths/tools.widths";
+@import "node_modules/inuit-responsive-tools/tools.responsive";
+@import "tools.aliases";
+
+
+/**
+ * #GENERIC
+ */
+@import "node_modules/inuit-normalize/generic.normalize";
+@import "node_modules/inuit-reset/generic.reset";
+@import "node_modules/inuit-box-sizing/generic.box-sizing";
+@import "node_modules/inuit-shared/generic.shared";
+
+
+/**
+ * #BASE
+ */
+@import "node_modules/inuit-page/base.page";
+@import "base.page";
+@import "node_modules/inuit-headings/base.headings";
+@import "node_modules/inuit-lists/base.lists";
+@import "node_modules/inuit-images/base.images";
+@import "base.type";
+@import "base.links";
+@import "base.quotes";
+
+
+/**
+ * #OBJECTS
+ */
+@import "objects.wrappers";
+
+$inuit-enable-layout--middle:   true;
+$inuit-enable-layout--bottom:   true;
+$inuit-enable-layout--large:    true;
+@import "node_modules/inuit-layout/objects.layout";
+// @import "node_modules/inuit-buttons/objects.buttons";
+// @import "node_modules/inuit-media/objects.media";
+
+
+/**
+ * #COMPONENTS
+ */
+@import "components.site-header";
+@import "components.site-nav";
+@import "components.social-nav";
+@import "components.about";
+@import "components.projects";
+@import "components.testimonials";
+@import "components.site-footer";
+
+// @import "components.page-foot";
+// @import "components.site-nav";
+// @import "components.ads";
+// @import "components.promo";
+
+
+/**
+ * #TRUMPS
+ */
+@import "node_modules/inuit-clearfix/trumps.clearfix";
+
+$inuit-use-fractions:   false;
+@import "node_modules/inuit-widths/trumps.widths";
+
+$inuit-enable-margins:          true;
+$inuit-enable-margins--huge:    true;
+$inuit-enable-margins--none:    true;
+@import "node_modules/inuit-spacing/trumps.spacing";
+
+/** shame
+@import "sass/shame";
+ */

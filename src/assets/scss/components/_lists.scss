@@ -1,0 +1,72 @@
+/**
+ * Lists Stylesheet
+ *
+ * Styles used for Lists components shared across all pages.
+ */
+
+/* list of logos */
+ul.logo_list {
+	margin: 0 0 0 -2%;
+	padding: 0;
+	@include clearfix;
+	
+	li {
+		float: left;
+		width: 31.333%;
+		margin: 0 0 .5em 2%;
+		list-style: none;
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		border: 1px solid #dadcdd;
+		@include transition(all 250ms linear);
+
+		&:hover {
+			box-shadow: 0 0 8px 1px rgba(0,0,0,0.2);
+		}
+	}
+}
+
+@include breakpoint(XS) {
+	ul.logo_list li {
+		width: 23%;
+		margin: 0 0 .675em 2%;
+	}
+}
+
+@include breakpoint(S) {
+	ul.logo_list {
+		margin: 0 0 0 -1.5%;
+
+		li {
+			width: 18.5%;
+			margin: 0 0 .75em 1.5%;
+		}
+	}
+}
+
+@include breakpoint(M) {
+	ul.logo_list {
+		margin: 0 0 0 -1.25%;
+
+		li {
+			width: 15.417%;
+			margin: 0 0 .75em 1.25%;
+		}
+	}
+}
+
+@include breakpoint(L) {
+	ul.logo_list {
+		margin: 0 0 0 -1%;
+
+		li {
+			width: 13.286%;
+			margin: 0 0 .75em 1%;
+		}
+	}
+}
+
+

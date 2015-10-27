@@ -1,0 +1,35 @@
+/**
+ * Color Stylesheet
+ *
+ * This file sets the default colors used throught the site. It holds all 
+ * the variables related to color and also sets styles for base elements 
+ * such as html and body.
+ */
+
+/** Base color and variations */
+$baseColor:                     #585858;
+$baseColorLight:                #999;
+$baseColorDark:                 #333;
+
+/** Highlighted colors and variations */
+$primaryColor:                  #99ccff;
+$secondaryColor:                #00843D;
+$tertiaryColor:                 #DE5B00;
+
+/** Other colors and variations */
+$requiredColor:                 #ca672e;
+$errorColor:                    #ffff99;
+
+/** Base background color and variations */
+$baseBgColor:                   #ccc;
+$baseBgColorLight:              #ccc;
+$baseBgColorDark:               #333;
+
+
+/** Base Element Color Styles */
+html {
+	background: $baseBgColor;
+}
+body {
+	background: #fff;
+}

@@ -1,0 +1,102 @@
+/*------------------------------------*\
+    #PROJECTS SECTION
+\*------------------------------------*/
+
+.testimonials {
+	padding: ($spacing-unit * 2) 0;
+	color: white;
+	background-color: #5B7D7D;
+
+	&__header {
+		margin-bottom: 3rem;
+
+		h2 {
+			margin: 0;
+			color: white;
+			font-size: 40px;
+			text-align: center;
+
+			span {
+				display: inline-block;
+				padding: 0 0.25em;
+				background-color: #2C5353;
+			}
+		}
+	}
+
+	&__list {
+		margin: 0 -$spacing-unit;
+
+		@at-root .flexbox & {
+			display: flex;
+			flex-wrap: wrap;	
+		}
+	}
+
+	&__item {
+		@media all and (min-width: 40em) {
+			width: 50%;
+		}
+		@media all and (min-width: 60em) {
+			width: 33.33%;
+		}
+
+		// flexbox supported
+		@at-root .flexbox & {
+			display: flex;
+			flex-grow: 1;
+		}
+
+		// flexbox fallback
+		@at-root .no-flexbox & {
+			@media all and (min-width: 40em) {
+				float: left;
+			}
+			@media all and (min-width:40em) and (max-width:60em) {
+				&:nth-child(2n+1) {
+					clear: both;
+				}
+			}
+			@media all and (min-width: 60em) {
+				&:nth-child(3n+1) {
+					clear: both;
+				}
+			}
+		}
+
+		// individual quote item
+		blockquote {
+			margin: $spacing-unit;
+			width: 100%;
+
+			@at-root .flexbox & {
+				display: flex;
+				flex-direction: column;
+			}
+
+			svg {
+				width: 30px;
+				height: 30px;
+				fill: white;
+			}
+
+			q {
+				font-size: 18px;
+
+				@at-root .flexbox & {
+					display: flex;
+					flex: 1 0 auto;
+					flex-direction: column;
+				}
+			}
+
+			cite {
+				span {
+					display: inline-block;
+					padding: 0 0.25em;
+					background-color: #406868;
+				}
+			}
+		}
+	}
+}

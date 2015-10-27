@@ -1,0 +1,210 @@
+/**
+ * Typography Stylesheet
+ *
+ * This file sets the fonts and font styles used throught the site. It holds all
+ * the variables related to typography and also sets styles for base elements 
+ * such as body, h1, a, blockquote, etc.
+ */
+
+/** Font Stacks */
+// Base font stacks for main copy
+$baseFontStack:             Arial, Serif;
+
+// Primary font stacks for headers
+$primaryFontStack:          'Lato', Arial, sans-serif;
+$primaryFontStackLight:     'Lato', Arial, sans-serif;
+$primaryFontStackBold:      'Lato', Arial, sans-serif;
+
+// Secondary font stacks
+$secondaryFontStack:        Georgia, Serif;
+
+// Terciary font stacks
+$terciaryFontStack:         Georgia, Serif;
+
+
+/** Font Sizes and Spacing */
+// Base font sizes
+$baseFontSize:              100%;
+$baseLineHeight:            1.375;
+$baseMargin:                1.5em;
+$headerMargin:              1em;
+
+
+/** Font Colours */
+// Base font color
+$baseFontColor:             #777;
+$baseFontColorLight:        #999;
+$baseFontColorDark:         #333;
+
+// Highlighted font colors
+$primaryFontColor:          #666;
+$secondaryFontColor:        #999;
+$terciaryFontColor:         #333;
+
+// Base link colors
+$baseLinkColor:             #6699cc;
+$baseLinkColorVisited:      #0077C3;
+$baseLinkColorHover:        #6699cc;
+$baseLinkColorActive:       #6699cc;
+
+
+/** Font Mixins */
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/** Font/@font-face Definitions */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+
+
+
+/**
+ * Base Element Font Styles
+ * 
+ * Only define font styles for base and pseudo elements here.
+ */
+
+// Body element
+body {
+    font-family: $baseFontStack;
+    font-size: $baseFontSize;
+    line-height: $baseLineHeight;
+    color: $baseFontColor;
+}
+
+// Heading Elements
+%heading {
+    font-family: $primaryFontStack;
+    line-height: 1;
+    color: $primaryFontColor;
+    margin: 0 0 $headerMargin 0;
+
+    a {
+        color: $primaryFontColor;
+
+        &:hover {
+            color: $baseLinkColorHover;
+        }
+    }
+}
+
+.heading1 {
+    @extend %heading;
+    font-size: 3em;
+    font-weight: 300;
+}
+.heading2 {
+    @extend %heading;
+    font-size: 2em;
+    font-weight: 300;
+}
+.heading3 {
+    @extend %heading;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.heading4 {
+    @extend %heading;
+    font-size: 1.25em;
+    font-weight: 300;
+}
+.heading5 {
+    @extend %heading;
+    font-size: 1.125em;
+    font-weight: 400;
+}
+.heading6 {
+    @extend %heading;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+h1 { @extend .heading1; }
+h2 { @extend .heading2; }
+h3 { @extend .heading3; }
+h4 { @extend .heading4; }
+h5 { @extend .heading5; }
+h6 { @extend .heading6; }
+
+// Block elements
+p,
+hr,
+ol,
+ul,
+dl,
+blockquote,
+pre,
+address {
+    margin: 0 0 $baseMargin 0;
+}
+
+// Form elements
+form,
+fieldset,
+legend {
+    margin: 0 0 $baseMargin 0;
+}
+
+input,
+select,
+textarea {
+    color: $baseColorLight;
+}
+
+// Table elements
+table {
+    width: 100%;
+    margin: 0 0 $baseMargin 0;
+}
+thead {}
+tbody {}
+tfoot {}
+tr {}
+th,
+td {
+    padding: 5px 10px;
+    vertical-align: middle;
+}
+
+// List elements
+li {}
+ul li {
+    margin-left: 20px;
+    list-style: disc;
+}
+ol li {
+    margin-left: 23px;
+    list-style: decimal;
+}
+ol ol {
+    margin: 5px 0;
+    li {
+        list-style: lower-alpha;
+    }
+}
+dt {
+    margin-top: 10px;
+}
+dd {
+    padding: 3px 0;
+}
+
+// Inline elements
+a {
+    color: $baseLinkColor;
+    &:link,
+    &:active,
+    &:visited {
+        color: $baseLinkColorHover;
+        text-decoration: none;
+    }
+    &:hover {
+        color: #fff;
+        background: $baseLinkColor;
+    }
+}
+
+blockquote {}

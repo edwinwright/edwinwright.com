@@ -1,0 +1,241 @@
+/**
+ * Buttons Stylesheet
+ *
+ * Styles used for Buttons components shared across all pages.
+ */
+
+.primary-button {
+
+}
+
+.primary-button:hover {
+
+}
+
+.secondary-button {
+    
+}
+
+.secondary-button:hover {
+    
+}
+
+.terciary-button {
+    
+}
+
+.terciary-button:hover {
+    
+}
+
+
+
+
+.skypeLink {
+	span {
+		display: none;
+	}
+
+	&:before {
+		@include icon-skype;
+		width: 1em;
+		height: 1em;
+		margin-right: .25em;
+		font-size: 1em;
+	}
+}
+
+.phoneLink {
+	span {
+		display: none;
+	}
+
+	&:before {
+		@include icon-phone;
+		width: 1em;
+		height: 1em;
+		margin-right: .25em;
+		font-size: 1em;
+	}
+}
+
+.linkedinLink {
+	span {
+		display: none;
+	}
+
+	&:before {
+		@include icon-linkedin;
+		width: 1em;
+		height: 1em;
+		margin-right: .25em;
+		font-size: 1em;
+	}
+}
+
+
+.button {
+	@extend .heading6;
+	display: inline-block;
+	padding: .5em .75em;
+	color: $baseFontColor;
+	line-height: 1;
+	background: $baseBgColorLight;
+	border-radius: .3em;
+	@include transition(all 250ms linear);
+	
+	span {
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+    &:link,
+    &:active,
+    &:visited {
+        color: $baseFontColor;
+    }
+
+	&:hover {
+		color: $primaryFontColor;
+		background-color: $primaryColor;
+	}
+}
+
+
+
+.downloadButton {
+	@extend .heading6;
+	position: relative;
+	display: inline-block;
+	padding: .5em .75em .5em 2em;
+	color: $baseFontColor;
+	line-height: 1;
+	background: $baseBgColorLight;
+	border-radius: .3em;
+	@include transition(all 250ms linear);
+	overflow: hidden;
+	
+	span {
+		text-transform: uppercase;
+		line-height: 1;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		left: 0;
+		width: 2em;
+		height: 2em;
+		font-size: 1em;
+		line-height: 2;
+		text-align: center;
+		@include transition(all 250ms $ease-in-out-cubic);
+	}
+
+	&:before {
+		@include icon-file;
+		top: 0;
+		opacity: 1;
+	}
+
+	&:after {
+		@include icon-arrow-down;
+		top: -100%;
+		opacity: 0;
+	}
+
+    &:link,
+    &:active,
+    &:visited {
+        color: $baseFontColor;
+    }
+
+	&:hover {
+		color: $primaryFontColor;
+		background-color: $primaryColor;
+
+		&:before {
+			top: 100%;
+			opacity: 0;
+		}
+
+		&:after {
+			top: 0;
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+.externalButton {
+	position: relative;
+	display: inline-block;
+	width: 1.75em;
+	height: 1.75em;
+	color: $baseFontColor;
+	background: $baseBgColorLight;
+	border-radius: .3em;
+	@include transition(all 200ms linear);
+	overflow: hidden;
+
+	&:hover {
+		background-color: $primaryColor;
+	}
+
+	span {
+		display: inline-block;
+		text-indent: -9999px;
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		left: 0;
+		width: 1.75em;
+		height: 1.75em;
+		font-size: 1em;
+		line-height: 1.75;
+		text-align: center;
+		@include transition(all 200ms $ease-in-out-cubic);
+	}
+
+	&:before {
+		@include icon-link;
+		top: 0;
+		opacity: 1;
+	}
+
+	&:after {
+		@include icon-arrow-up-right;
+		left: -100%;
+		top: 100%;
+		opacity: 0;
+	}
+
+    &:link,
+    &:active,
+    &:visited {
+        color: $baseFontColor;
+    }
+
+	&:hover {
+		color: $primaryFontColor;
+		background-color: $primaryColor;
+
+		&:before {
+			left: 100%;
+			top: -100%;
+			opacity: 0;
+		}
+
+		&:after {
+			left: 0;
+			top: 0;
+			opacity: 1;
+		}
+	}
+}
+
+

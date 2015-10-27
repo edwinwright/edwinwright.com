@@ -1,0 +1,34 @@
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+
+/**
+ * Inline quotes.
+ *
+ */
+
+
+
+
+
+
+/**
+ * Block quotes.
+ *
+ * 1. Hang opening punctuation.
+ */
+blockquote {
+  q {
+    font-style: italic;
+    quotes: none;
+
+    &:before,
+    &:after {
+      content: '';
+    }
+  }
+
+  cite {
+    font-style: normal;
+  }
+}

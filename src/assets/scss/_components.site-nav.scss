@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+.site-nav {
+	display: inline-block;
+
+	&__list {
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+
+		a {
+			position: relative;
+			display: block;
+			padding: 0 1rem;
+			line-height: $site-header-height;
+			color: #444;
+			font-weight: 300;
+			transition: color 150ms linear;
+			outline: none;
+
+			&:after {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				content: '';
+				background-color: transparent;
+				transition: background 150ms linear;
+			}
+
+			&:hover,
+			&:focus,
+			&:active,
+			&.active {
+				color: red;
+				text-decoration: none;
+
+				&:after {
+					background-color: red;
+				}
+			}
+		}
+	}
+}

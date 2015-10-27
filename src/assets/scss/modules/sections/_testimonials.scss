@@ -1,0 +1,33 @@
+/**
+ * Projects Section Module Stylesheet
+ *
+ * Styles used for the Header module shared across all pages.
+ * Check your styles! Could anything in here be re-defined as a component?
+ */
+
+section#testimonials {
+	border-bottom: 1px solid #f3f6f6;
+
+	> .inner {
+		@include page-wrap(3em, 2em);
+	}
+
+	blockquote {
+		margin-top: 0;
+		padding: 1em 0;
+		border-top: 1px solid #dadcdd;
+	}
+}
+
+@include breakpoint(S) {
+	section#testimonials {
+		.testimonialSet {
+			margin-left: -4%;
+		}
+		blockquote {
+			float: left;
+			width: 46%;
+			margin-left: 4%;
+		}
+	}
+}

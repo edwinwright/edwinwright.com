@@ -1,0 +1,18 @@
+/**
+ * Projects Section Module Stylesheet
+ *
+ * Styles used for the Header module shared across all pages.
+ * Check your styles! Could anything in here be re-defined as a component?
+ */
+
+section#projects {
+	border-bottom: 1px solid #f3f6f6;
+
+	> .inner {
+		@include page-wrap(3em, 3em);
+
+		> footer {
+			text-align: center;
+		}
+	}
+}

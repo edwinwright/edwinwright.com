@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    #SITE FOOTER
+\*------------------------------------*/
+
+/**
+ * 1. A slightly smaller padding on smaller viewports.
+ * 2. Grow to full-sized padding on large enough viewports.
+ */
+.site-footer {
+  padding: $spacing-unit 0;
+  background-color: #444;
+
+		svg {
+      display: block;
+      width: $site-header-height;
+      height: $site-header-height;
+      fill: white;
+		}
+
+}

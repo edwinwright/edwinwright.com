@@ -1,0 +1,41 @@
+/*------------------------------------*\
+    #PAGE-HEAD
+\*------------------------------------*/
+
+.social-nav {
+	display: inline-block;
+
+	&__list {
+		margin: 0;
+		list-style: none;
+	}
+
+	&__item {
+		display: inline-block;
+
+		a {
+			position: relative;
+			display: block;
+			padding: ($site-header-height / 4) ($site-header-height / 8);
+			line-height: $site-header-height;
+			outline: none;
+			
+			&:hover,
+			&:focus,
+			&:active,
+			&.active {
+				svg {
+					fill: red;
+				}
+			}
+		}
+		
+		svg {
+      display: block;
+  		width: ($site-header-height / 2);
+  		height: ($site-header-height / 2);
+			fill: #444;
+			transition: fill 150ms linear;
+		}
+	}
+}

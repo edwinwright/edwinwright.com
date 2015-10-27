@@ -1,0 +1,37 @@
+/**
+ * Footer Module
+ *
+ * Styles used for the Footer module shared across all pages.
+ */
+
+#mainFooter {
+	width: 100%;
+	border-top: 1px solid #0f1519;
+	background: #1e2b33;
+
+	> .inner {
+		@include page-wrap(2em, 0);
+		text-align: center;
+		color: #fff;
+	}
+
+	.contactDetails {
+		display: inline-block;
+		padding: 0;
+		@include clearfix;
+
+		li {
+			display: inline-block;
+			margin: 0 1em 1em;
+			list-style: none;
+		}
+
+		a {
+			@include transition(all 200ms linear);
+		}
+
+		a:hover {
+			background: none;
+		}
+	}
+}
